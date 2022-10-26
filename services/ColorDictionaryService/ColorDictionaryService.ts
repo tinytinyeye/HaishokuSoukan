@@ -1,4 +1,4 @@
-import { ColorKey, ColorCodes, ColorNames } from './colors';
+import { ColorKey, ColorCodes, ColorNames, MeasuredColorCodes } from './colors';
 import { cmykToRgb, rgbToHex } from './utils';
 import type { ColorInfo } from './types';
 
@@ -6,7 +6,7 @@ const buildDictionary = (): Record<ColorKey, ColorInfo> => {
     const dictionary = Object.keys(ColorKey).map((key) => {
         const name = ColorNames[key];
         const cmyk = ColorCodes[key];
-        const rgb = cmykToRgb(cmyk);
+        const rgb = MeasuredColorCodes[key] || cmykToRgb(cmyk);
         const hex = rgbToHex(rgb);
 
         return { key, name, cmyk, rgb, hex };

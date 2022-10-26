@@ -29,3 +29,13 @@ export const ColorCodes: Record<ColorKey, CMYK> = {
     [ColorKey.CoralRed]: [0, 55, 40, 0],
     [ColorKey.FreshColor]: [0, 53, 45, 0]
 };
+
+export const MeasuredColorCodes = {
+    [ColorKey.HermosaPink]: [238, 175, 202],
+    [ColorKey.CorinthianPink]: [232, 161, 175],
+    [ColorKey.CameoPink]: [206, 160, 164],
+    [ColorKey.Fawn]: [193, 156, 130],
+    [ColorKey.LightBrownDrab]: [168, 124, 128],
+    [ColorKey.CoralRed]: [225, 117, 103],
+    [ColorKey.FreshColor]: [225, 126, 94]
+}
