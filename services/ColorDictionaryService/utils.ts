@@ -15,5 +15,5 @@ const valueToHex = (val: number) => val.toString(16);
 export const rgbToHex = (rgb: RGB): string => {
     const [R, G, B] = rgb;
 
-    return `${valueToHex(R)}${valueToHex(G)}${valueToHex(B)}`;
+    return `#${valueToHex(R)}${valueToHex(G)}${valueToHex(B)}`;
 }
